@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Ex1 {
+	public static void main(String[] args) {
+		Scanner in = new Scanner (System.in);
+		System.out.println("Digite o valor investido");
+		double v = in.nextDouble();
+		System.out.println("Digite o número de meses que o valor ficou investido");
+		int m = in.nextInt();
+		double nv = investiu (v, m);
+		System.out.println(nv);
+	}
+	public static double investiu(double v, int m) {
+		double nv = 0, p;
+		p = v / 100;
+		for(int i = 0; i < m; i++) {
+			nv += p;
+		}
+		
+		nv += v;
+		return nv;
+	}
+}
